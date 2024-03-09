@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 
 import * as THREE from 'three'; //importing the three js library 
 
@@ -6,12 +6,16 @@ import * as THREE from 'three'; //importing the three js library
 // we always need: a scene, a renderer and a camera
 //scene contains all the objects,cameras and lights
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; //importing orbit controls class from threejs examples namespace
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'; //importing orbit controls class from threejs examples namespace
 
 const scene = new THREE.Scene();
 
 //to look at things inside the screen, we need a camera
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 0.1,1000);  //field of view,aspect ratio(based off of users browser window),view frustum (to control which objects are visible relative to the camera)
+
+
+console.log("Hello");
+
 
 //to render out the actual graphics
 //cavas: is the dom element the renderer uses
